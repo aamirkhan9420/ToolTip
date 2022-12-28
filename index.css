@@ -1,0 +1,173 @@
+.box{
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+    height: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+button{
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+   background-color:  rgb(232, 59, 88);
+   border-radius: 10px;
+     cursor: pointer;
+     width: 120px;
+}
+
+/* left tool tip and button */
+.left{
+  position: relative;
+}
+
+.left .tooltiptextLeft{
+    position: absolute;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    border-radius: 6px;
+    top: 0;
+
+     right: 100%;
+    padding: 10px;
+    z-index: 1;
+    margin-right: 5px;
+}
+
+.left:hover .tooltiptextLeft{
+    
+    visibility: visible;
+}
+
+.left .tooltiptextLeft::after{
+  content: "";
+  position: absolute;
+  top:50%;
+  
+  border-width: 5px;
+  border-color: transparent transparent black transparent;
+  border-style: solid;
+}
+.left .tooltiptextLeft::after{
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent black ;
+
+}
+/* right tool tip  and button */
+.right{
+    position: relative;
+ 
+    
+}
+.right .tooltiptextRight{
+    position: absolute;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    border-radius: 6px;
+    top: 0;
+    left: 100%;
+    padding: 10px;
+    z-index: 1;
+    margin-left: 5px;
+}
+
+.right:hover .tooltiptextRight{
+    
+    visibility: visible;
+}
+.right .tooltiptextRight::after{
+    content: " ";
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+    margin-bottom: 5px;
+}
+
+
+/* bottom tool tip and button */
+.bottom{
+  position: relative;
+ 
+    
+}
+.bottom .tooltiptextBottom{
+    position: absolute;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    border-radius: 6px;
+    top:100% ;
+    margin-top: 5px;
+    right: 5%;
+    left: 5%;
+ 
+    padding: 10px;
+    z-index: 1;
+
+}
+.bottom:hover .tooltiptextBottom{
+  
+    visibility: visible;
+
+}
+
+.bottom .tooltiptextBottom::after{
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+/* top tool tip and button */
+.top{
+  position: relative;
+    
+}
+
+
+.top .tooltiptextTop{
+    position: absolute;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    border-radius: 6px;
+    bottom: 100%;
+    right: 0px;
+    /* left: -60px; */
+    margin-bottom: 5px;
+    padding: 10px;
+    z-index: 1;
+
+}
+
+.top:hover .tooltiptextTop{
+    
+    visibility: visible;
+
+}
+.top .tooltiptextTop::after{
+    content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+
+  border-width: 5px;
+  border-style: solid;
+  border-color:  black transparent transparent transparent;
+}
